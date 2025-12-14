@@ -1,15 +1,13 @@
-FROM rust:1.83-alpine AS builder
+FROM rust:latest AS builder
 
 WORKDIR /app
-
-RUN apk add --no-cache musl-dev
 
 COPY Cargo.toml Cargo.lock ./
 COPY src ./src
 
 RUN cargo build --release
 
-FROM alpine:latest
+FROM debian:bookworm-slim
 
 WORKDIR /app
 
