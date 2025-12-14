@@ -20,14 +20,40 @@ After cloning, run `./scripts/setup-hooks.sh` to enable pre-commit hooks.
 ## Docker
 
 - `docker build -t my-rust-project .` - Build Docker image
-- `docker run my-rust-project` - Run container
+- `docker run -p 3000:3000 my-rust-project` - Run container
+
+## Docker Compose
+
+- `docker compose up -d` - Start application
+- `docker compose down` - Stop application
+- `docker compose logs -f` - View logs
 
 ## CI
 
 GitHub Actions runs on push/PR to master:
 - Format check, clippy, build, and test
 - Code coverage with cargo-tarpaulin (uploaded as artifact)
+- Docker build verification
 
 ## Architecture
 
-This is a Rust binary application. Entry point: `src/main.rs`
+This is a Rust web server using Axum framework.
+
+- `src/main.rs` - Main entry point with Axum server and routes
+- Tests are inline using `#[cfg(test)]` module
+
+## Web Server
+
+The application runs an Axum web server on port 3000.
+
+### API Endpoints
+
+- `GET /` - Returns "Hello, World!"
+- `GET /health` - Returns `{"status": "ok"}`
+- `GET /greet/{name}` - Returns personalized greeting
+
+### Dependencies
+
+- `axum` - Web framework
+- `tokio` - Async runtime
+- `serde` / `serde_json` - JSON serialization
