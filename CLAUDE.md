@@ -51,9 +51,15 @@ The application runs an Axum web server on port 3000.
 - `GET /` - Returns "Hello, World!"
 - `GET /health` - Returns `{"status": "ok"}`
 - `GET /greet/{name}` - Returns personalized greeting
+- `POST /ai/chat` - Chat with Claude AI (requires `ANTHROPIC_API_KEY`)
+
+### Environment Variables
+
+- `ANTHROPIC_API_KEY` - Required for `/ai/chat` endpoint
 
 ### Dependencies
 
 - `axum` - Web framework
 - `tokio` - Async runtime
 - `serde` / `serde_json` - JSON serialization
+- `reqwest` - HTTP client for Anthropic API
