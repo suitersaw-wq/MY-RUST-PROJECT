@@ -7,6 +7,10 @@ A Rust application.
 ## Getting Started
 
 ```bash
+# Enable pre-commit hooks
+./scripts/setup-hooks.sh
+
+# Build and run
 cargo build
 cargo run
 ```

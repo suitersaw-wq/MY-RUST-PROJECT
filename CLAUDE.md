@@ -13,6 +13,10 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - `cargo fmt` - Format code
 - `cargo tarpaulin` - Run tests with coverage (requires cargo-tarpaulin)
 
+## Setup
+
+After cloning, run `./scripts/setup-hooks.sh` to enable pre-commit hooks.
+
 ## CI
 
 GitHub Actions runs on push/PR to master:
