@@ -15,4 +15,6 @@ COPY --from=builder /app/target/release/my-rust-project ./
 
 USER nobody
 
+EXPOSE 3000
+
 CMD ["./my-rust-project"]
