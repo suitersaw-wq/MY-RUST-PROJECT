@@ -17,6 +17,11 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 After cloning, run `./scripts/setup-hooks.sh` to enable pre-commit hooks.
 
+## Docker
+
+- `docker build -t my-rust-project .` - Build Docker image
+- `docker run my-rust-project` - Run container
+
 ## CI
 
 GitHub Actions runs on push/PR to master:

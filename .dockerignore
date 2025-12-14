@@ -1,0 +1,6 @@
+target
+.git
+.github
+.hooks
+scripts
+*.md
