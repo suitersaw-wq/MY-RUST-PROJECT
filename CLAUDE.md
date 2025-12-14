@@ -11,11 +11,13 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - `cargo test <test_name>` - Run a specific test
 - `cargo clippy` - Run linter
 - `cargo fmt` - Format code
+- `cargo tarpaulin` - Run tests with coverage (requires cargo-tarpaulin)
 
 ## CI
 
 GitHub Actions runs on push/PR to master:
 - Format check, clippy, build, and test
+- Code coverage with cargo-tarpaulin (uploaded as artifact)
 
 ## Architecture
 
