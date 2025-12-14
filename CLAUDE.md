@@ -12,6 +12,11 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - `cargo clippy` - Run linter
 - `cargo fmt` - Format code
 
+## CI
+
+GitHub Actions runs on push/PR to master:
+- Format check, clippy, build, and test
+
 ## Architecture
 
 This is a Rust binary application. Entry point: `src/main.rs`
